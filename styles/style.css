@@ -1,4 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.*/
+/* Здесь вы напишете основную часть стилей страницы. */
 
 .page {
   min-inline-size: 320px;
@@ -10,7 +10,7 @@
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: 'wght' var(--card-font-weight, 400);
+  font-variation-settings: "wght" var(--card-font-weight, 400);
 }
 
 .header {
@@ -20,7 +20,6 @@
 .container {
   margin: 0 auto;
   inline-size: var(--card-inline-size, min(100%, 700px));
-  
 }
 
 .header__container {
@@ -30,7 +29,7 @@
   align-items: center;
   border: 2px solid var(--main-color, #000);
   padding-block: clamp(120px, 10vw, 130px) 23px;
-  font-family: var(--font-accent, 'Courier New', monospace);
+  font-family: var(--font-accent, "Courier New", monospace);
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
 }
@@ -64,7 +63,7 @@
   font-weight: 700;
   font-size: var(--main-font-size, 1.125rem);
   line-height: normal;
-  font-variation-settings: 'wght' var(--card-title-font-weight, 700);
+  font-variation-settings: "wght" var(--card-title-font-weight, 700);
 }
 
 .article__body {
@@ -95,7 +94,6 @@
   inline-size: 100%;
   block-size: 100%;
 }
-
 
 .article__img--blur {
   filter: blur(4px);
@@ -129,14 +127,11 @@
   position: absolute;
   opacity: 0.5;
   color: var(--main-color, #000);
-  font-family: var(--font-accent, 'Courier New', monospace);
+  font-family: var(--font-accent, "Courier New", monospace);
   font-size: var(--accent-font-size, 0.875rem);
   text-transform: uppercase;
-  text-shadow:
-    -1px 0 var(--bg-color, #fff), 
-    0 1px var(--bg-color, #fff), 
-    1px 0 var(--bg-color, #fff), 
-    0 -1px var(--bg-color, #fff);
+  text-shadow: -1px 0 var(--bg-color, #fff), 0 1px var(--bg-color, #fff),
+    1px 0 var(--bg-color, #fff), 0 -1px var(--bg-color, #fff);
   inset-block-start: 23px;
   inset-inline-end: calc(min(3%, 25px) + 2px);
   mix-blend-mode: hard-light;
@@ -203,7 +198,7 @@
 }
 
 .like-icon:active .core {
-  fill: #FF0000;
+  fill: #ff0000;
   transition-delay: 0s;
   transition-duration: 0.3s;
 }
@@ -221,25 +216,25 @@
 }
 
 .like-icon:active .main-body {
-  fill: #FF0000;
+  fill: #ff0000;
   transition-delay: 0.05s;
   transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .core {
-  fill: #FF0000;
+  fill: #ff0000;
   transition-delay: 0s;
   transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: #FF0000;
+  fill: #ff0000;
   transition-delay: 0.05s;
   transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .contour {
-  fill: #FF0000;
+  fill: #ff0000;
   transition-delay: 0.06s;
   transition-duration: 0.3s;
 }
@@ -300,7 +295,7 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
-  font-family: var(--font-accent, 'Courier New', monospace);
+  font-family: var(--font-accent, "Courier New", monospace);
   font-size: var(--accent-font-size, 0.875rem);
   line-height: normal;
   mix-blend-mode: difference;
@@ -335,7 +330,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0; /* Added padding for better vertical centering */
+  padding: 10px 0;
 }
 
 .footer {
@@ -344,8 +339,8 @@
 
 .floppy {
   fill: var(--button-text-color, #fff);
-  inline-size: 21px;
-  block-size: 21px;
+  inline-size: var(--floppy-size, 21px);
+  block-size: var(--floppy-size, 21px);
   mix-blend-mode: difference;
   position: relative;
   z-index: 1;
@@ -358,7 +353,7 @@
   column-gap: clamp(12px, 2vw, 20px);
   padding: var(--modal-padding-inline, 30px) 30px;
   color: var(--main-color, #000);
-  font-family: var(--font-accent, 'Courier New', monospace);
+  font-family: var(--font-accent, "Courier New", monospace);
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 1.5;
   text-transform: uppercase;
@@ -379,3 +374,5 @@
 .modal::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
+
+
