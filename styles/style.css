@@ -266,6 +266,9 @@
   padding: 0;
   background-color: var(--bg-color, #fff);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button::after {
@@ -299,8 +302,11 @@
   color: var(--button-text-color, #fff);
   font-family: var(--font-accent, 'Courier New', monospace);
   font-size: var(--accent-font-size, 0.875rem);
-  line-height: 0.9;
+  line-height: normal;
   mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .save-button {
@@ -317,12 +323,19 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__button {
   grid-column: 1 / -1;
   text-transform: uppercase;
   inline-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0; /* Added padding for better vertical centering */
 }
 
 .footer {
@@ -330,12 +343,12 @@
 }
 
 .floppy {
-  position: relative;
-  z-index: 1;
   fill: var(--button-text-color, #fff);
   inline-size: 21px;
   block-size: 21px;
   mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
 }
 
 .modal[open] {
