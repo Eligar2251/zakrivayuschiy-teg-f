@@ -266,6 +266,7 @@
   padding: 0;
   background-color: var(--bg-color, #fff);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .button::after {
@@ -273,14 +274,14 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color, #000);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
-  transform-origin: left center;
+  transform-origin: left;
+  z-index: 0; 
 }
 
 .button:hover::after {
-  transform: scale(1);
+  transform: scaleX(1);
 }
 
 .button:focus {
@@ -293,7 +294,8 @@
   transition-duration: 0.3s;
 }
 
-.button__text {
+.button__text,
+.floppy {
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
@@ -330,10 +332,8 @@
 }
 
 .floppy {
-  fill: var(--button-text-color, #fff);
   inline-size: 21px;
   block-size: 21px;
-  mix-blend-mode: difference;
 }
 
 .modal[open] {
