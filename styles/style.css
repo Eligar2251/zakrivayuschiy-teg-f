@@ -342,10 +342,6 @@
   padding: 10px 0;
 }
 
-.footer {
-  padding-block: 50px 105px;
-}
-
 .floppy {
   fill: var(--button-text-color, #fff);
   inline-size: var(--floppy-size, 21px);
