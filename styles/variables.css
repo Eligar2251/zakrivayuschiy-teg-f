@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-main: 'Inter-Variable', system-ui, sans-serif;
-  --font-accent: 'PressStart2P-Regular', monospace;
+  --font-accent: 'PressStart2P', monospace;
   --main-font-size: 1.125rem;
   --accent-font-size: 0.875rem;
   --floppy-size: 21px;
@@ -14,8 +14,8 @@
   --label-stroke-color: #000;
   --card-font-weight: 400;
   --card-title-font-weight: 700;
-  --contour-color: #d3d3d3;
-  --animation-fill-color: #ff3b30;
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
   --bg-image: repeating-linear-gradient(
       to right, 
       #d3d3d3 0,

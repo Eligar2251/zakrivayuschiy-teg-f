@@ -29,14 +29,21 @@
   align-items: center;
   border: 2px solid var(--main-color, #000);
   padding-block: clamp(120px, 10vw, 130px) 23px;
-  font-family: var(--font-accent, "Courier New", monospace);
+  font-family: var(--font-accent, "Courier New", fantasy);
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
+}
+
+.main-body {
+  fill: transparent;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
 }
 
 .main__container {
   display: grid;
   gap: 50px;
+  margin-block-end: 100px;
 }
 
 .header__logo {
@@ -53,6 +60,7 @@
 }
 
 .article {
+  position: relative;
   border: 2px solid var(--main-color, #000);
   background-color: var(--bg-color, #fff);
 }
@@ -67,19 +75,19 @@
 }
 
 .article__body {
-  display: flex;
-  flex-direction: column;
   padding: 25px;
   font-size: var(--main-font-size, 1.125rem);
-  line-height: 1.16667;
+  line-height: 21px;
 }
 
-.article__text {
-  margin-block: 0 27px;
+.article__body p {
+  margin-bottom: 25px;
 }
 
-.article__opinion {
-  margin-block-end: 25px;
+.article__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .article__img-wrapper {
@@ -146,29 +154,36 @@
 }
 
 .card__button-wrapper {
+  position: relative;
   display: flex;
-  margin-inline: auto 0;
   max-block-size: 38px;
+  justify-content: flex-end;
+  gap: 7px;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
-  padding: 0 4px 0 0;
+  padding: 0;
   background-color: transparent;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
-}
-
-.card__icon-button:focus {
-  border: 2px solid var(--main-color, #000);
-  outline: none;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color, #000);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  outline: none;
+}
+
+.card__icon-button:active {
+  border: 2px solid transparent;
+  outline: none;
 }
 
 .sparks {
@@ -188,7 +203,7 @@
 
 .like-icon {
   width: 39px;
-  height: 36px;
+  height: 39px;
 }
 
 .like-icon:hover .core {
@@ -199,12 +214,6 @@
 
 .like-icon:active .core {
   fill: #ff0000;
-  transition-delay: 0s;
-  transition-duration: 0.3s;
-}
-
-.main-body {
-  fill: transparent;
   transition-delay: 0s;
   transition-duration: 0.3s;
 }
@@ -349,30 +358,34 @@
 .modal[open] {
   display: grid;
   grid-template-columns: auto auto;
+  column-gap: 20px;
   row-gap: 30px;
-  column-gap: clamp(12px, 2vw, 20px);
-  padding: var(--modal-padding-inline, 30px) 30px;
+  padding-inline: var(--modal-padding-inline, 30px);
+  padding-block: 30px;
   color: var(--main-color, #000);
   font-family: var(--font-accent, "Courier New", monospace);
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
-  max-width: 357px;
+  width: min(100%, 353px);
+  align-items: start;
+  overflow: hidden;
 }
 
 .modal__title {
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 1.5;
+  max-inline-size: 234px;
 }
 
 .floppy--modal {
   inline-size: 39px;
   block-size: 39px;
+  justify-self: center;
+  align-self: center;
 }
 
 .modal::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
-
-
