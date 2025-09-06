@@ -364,9 +364,8 @@
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
-  width: min(100%, 353px);
   align-items: start;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .modal__title {
